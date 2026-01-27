@@ -1,0 +1,45 @@
+# Model Browser Plugin Configuration
+
+# Resource Pack Settings
+resource-pack:
+  # Path to resource pack folder (relative to plugin data folder)
+  path: "resourcepack"
+
+  # Auto-scan interval in seconds (0 to disable)
+  auto-scan: 60
+
+  # Watch for changes
+  watch-for-changes: true
+
+# GUI Settings
+gui:
+  # Default GUI rows (3-6)
+  default-rows: 6
+
+  # Items per page
+  items-per-page: 45
+
+# Network Settings (for client mod)
+network:
+  # PacketEvents channel
+  channel: "modelbrowser:main"
+
+  # Enable PacketEvents communication
+  enable-packetevents: true
+
+# Logging
+logging:
+  enabled: true
+  debug: false
+
+# Model Categories
+categories:
+  enabled:
+    - "blocks"
+    - "items"
+    - "entities"
+    - "armor"
+    - "weapons"
+    - "food"
+    - "decorations"
+    - "misc"

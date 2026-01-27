@@ -1,0 +1,26 @@
+name: ModelBrowser
+version: 1.0-SNAPSHOT
+main: com.debornmc.modelBrowserPlugin.ModelBrowserPlugin
+api-version: '1.21'
+description: Model Browser Plugin for managing resource pack models
+
+commands:
+  modelbrowser:
+    description: Open the Model Browser GUI
+    usage: /<command> [gui|list|search|categories|info|reload|help]
+    permission: modelbrowser.use
+
+permissions:
+  modelbrowser.use:
+    description: Allows using the Model Browser
+    default: true
+  modelbrowser.admin:
+    description: Allows reloading the plugin
+    default: op
+  modelbrowser.delete:
+    description: Allows deleting models
+    default: op
+
+# Copy config.yml to plugin data folder
+resources:
+  - "config.yml"

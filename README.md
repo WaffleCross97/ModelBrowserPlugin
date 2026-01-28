@@ -47,8 +47,15 @@ A comprehensive Minecraft Java Edition plugin that provides an intuitive GUI int
 
 ## 🛠️ Development
 
-### Gradle Build 
-git pull https://github.com/WaffleCross97/ModelBrowserPlugin.git
+### Setting Up the Development Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/WaffleCross97/ModelBrowserPlugin.git
+cd ModelBrowserPlugin
+
+# Build the plugin
 ./gradlew build
-./gradlew runserver to test the plugin
-to update make a pull request 
+
+# Run the test server
+./gradlew runServer

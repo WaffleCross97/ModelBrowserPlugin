@@ -1,7 +1,7 @@
-package com.debornmc.modelBrowserPlugin.manager;
+package com.waffle.modelBrowserPlugin.manager;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
-import com.debornmc.modelBrowserPlugin.util.ResourcePackScanner;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.util.ResourcePackScanner;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.bukkit.configuration.file.FileConfiguration;

@@ -1,4 +1,4 @@
-package com.debornmc.modelBrowserPlugin.util;
+package com.waffle.modelBrowserPlugin.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

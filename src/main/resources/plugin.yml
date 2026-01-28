@@ -1,6 +1,6 @@
 name: ModelBrowser
 version: 1.0-SNAPSHOT
-main: com.debornmc.modelBrowserPlugin.ModelBrowserPlugin
+main: com.waffle.modelBrowserPlugin.ModelBrowserPlugin
 api-version: '1.21'
 description: Model Browser Plugin for managing resource pack models
 
@@ -19,6 +19,12 @@ permissions:
     default: op
   modelbrowser.delete:
     description: Allows deleting models
+    default: op
+  modelbrowser.give:
+    description: Allows receiving preview items from the Model Browser when hand is empty
+    default: op
+  modelbrowser.import:
+    description: Allows importing resource-pack files from the local imports folder
     default: op
 
 # Copy config.yml to plugin data folder

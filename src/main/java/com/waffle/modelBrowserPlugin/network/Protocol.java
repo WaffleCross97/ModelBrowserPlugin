@@ -1,4 +1,4 @@
-package com.debornmc.modelBrowserPlugin.network;
+package com.waffle.modelBrowserPlugin.network;
 
 /**
  * Defines protocol constants for Model Browser plugin messaging.

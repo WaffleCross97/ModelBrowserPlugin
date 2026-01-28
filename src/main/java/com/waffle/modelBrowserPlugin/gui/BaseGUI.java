@@ -1,7 +1,7 @@
-package com.debornmc.modelBrowserPlugin.gui;
+package com.waffle.modelBrowserPlugin.gui;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
-import com.debornmc.modelBrowserPlugin.util.ResourcePackScanner;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.util.ResourcePackScanner;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;

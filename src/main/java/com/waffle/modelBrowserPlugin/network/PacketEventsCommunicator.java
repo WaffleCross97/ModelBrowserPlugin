@@ -1,4 +1,4 @@
-package com.debornmc.modelBrowserPlugin.network;
+package com.waffle.modelBrowserPlugin.network;
 
 import com.github.retrooper.packetevents.PacketEvents;
 import com.github.retrooper.packetevents.manager.player.PlayerManager;
@@ -6,6 +6,7 @@ import com.github.retrooper.packetevents.protocol.player.ClientVersion;
 import com.github.retrooper.packetevents.wrapper.play.server.*;
 import com.github.retrooper.packetevents.protocol.item.ItemStack;
 import com.github.retrooper.packetevents.protocol.item.type.ItemTypes;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -88,7 +89,7 @@ public class PacketEventsCommunicator {
             sendEmptyGUIItems(player, windowId, slots);
 
             // Use proper logger instead of System.out
-            com.debornmc.modelBrowserPlugin.ModelBrowserPlugin.getInstance().getLogger().info(
+            ModelBrowserPlugin.getInstance().getLogger().info(
                     "[PacketEvents] Opened GUI for " + player.getName()
             );
 

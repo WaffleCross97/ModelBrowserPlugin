@@ -1,4 +1,4 @@
-package com.debornmc.modelBrowserPlugin.gui;
+package com.waffle.modelBrowserPlugin.gui;
 
 public enum ClickType {
     LEFT_CLICK,

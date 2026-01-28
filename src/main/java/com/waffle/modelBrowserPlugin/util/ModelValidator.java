@@ -1,4 +1,4 @@
-package com.debornmc.modelBrowserPlugin.util;
+package com.waffle.modelBrowserPlugin.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

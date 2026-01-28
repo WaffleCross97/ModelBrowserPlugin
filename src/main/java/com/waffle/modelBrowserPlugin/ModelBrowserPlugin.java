@@ -1,11 +1,12 @@
-package com.debornmc.modelBrowserPlugin;
+package com.waffle.modelBrowserPlugin;
 
-import com.debornmc.modelBrowserPlugin.command.ModelBrowserCommand;
-import com.debornmc.modelBrowserPlugin.command.TabCompleter;
-import com.debornmc.modelBrowserPlugin.gui.GUIManager;
-import com.debornmc.modelBrowserPlugin.listener.BukkitInventoryListener;
-import com.debornmc.modelBrowserPlugin.manager.ModelManager;
-import com.debornmc.modelBrowserPlugin.network.PacketEventsCommunicator;
+import com.waffle.modelBrowserPlugin.command.ModelBrowserCommand;
+import com.waffle.modelBrowserPlugin.command.TabCompleter;
+import com.waffle.modelBrowserPlugin.gui.GUIManager;
+import com.waffle.modelBrowserPlugin.listener.BukkitInventoryListener;
+import com.waffle.modelBrowserPlugin.manager.ModelManager;
+import com.waffle.modelBrowserPlugin.network.PacketEventsCommunicator;
+import com.waffle.modelBrowserPlugin.util.WebImportServer;
 import com.github.retrooper.packetevents.PacketEvents;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,6 +18,7 @@ public class ModelBrowserPlugin extends JavaPlugin {
     private ModelManager modelManager;
     private GUIManager guiManager;
     private PacketEventsCommunicator packetCommunicator;
+    private WebImportServer webImportServer;
     private FileConfiguration config;
 
     @Override
@@ -33,6 +35,7 @@ public class ModelBrowserPlugin extends JavaPlugin {
         // Initialize managers
         this.modelManager = new ModelManager(this);
         this.guiManager = new GUIManager(this);
+        this.webImportServer = new WebImportServer(this);
 
         // Initialize PacketEvents communicator
         this.packetCommunicator = new PacketEventsCommunicator();
@@ -42,6 +45,11 @@ public class ModelBrowserPlugin extends JavaPlugin {
         registerListeners();
 
         getLogger().info("PacketEvents communicator initialized!");
+
+        // Start lightweight HTTP server for web imports
+        if (config.getBoolean("web-import.enabled", true)) {
+            webImportServer.start();
+        }
 
         // Register commands
         getCommand("modelbrowser").setExecutor(new ModelBrowserCommand());
@@ -128,6 +136,11 @@ public class ModelBrowserPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        // Stop web import server
+        if (webImportServer != null) {
+            webImportServer.stop();
+        }
+
         // Shutdown PacketEvents communicator
         if (packetCommunicator != null) {
             packetCommunicator.shutdown();

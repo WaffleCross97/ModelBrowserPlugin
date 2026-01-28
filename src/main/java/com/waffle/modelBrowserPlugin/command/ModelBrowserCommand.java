@@ -1,7 +1,8 @@
-package com.debornmc.modelBrowserPlugin.command;
+package com.waffle.modelBrowserPlugin.command;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
-import com.debornmc.modelBrowserPlugin.gui.ModelBrowserGUI;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.gui.ModelBrowserGUI;
+import com.waffle.modelBrowserPlugin.manager.ModelManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.Command;
@@ -25,7 +26,7 @@ public class ModelBrowserCommand implements CommandExecutor {
     private final ModelBrowserPlugin plugin;
 
     /** Manager responsible for model operations like loading, searching, and categorization. */
-    private final com.debornmc.modelBrowserPlugin.manager.ModelManager modelManager;
+    private final ModelManager modelManager;
 
     /**
      * Constructs a new ModelBrowserCommand instance.

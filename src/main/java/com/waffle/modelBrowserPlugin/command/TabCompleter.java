@@ -1,6 +1,7 @@
-package com.debornmc.modelBrowserPlugin.command;
+package com.waffle.modelBrowserPlugin.command;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.manager.ModelManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
  * </p>
  */
 public class TabCompleter implements org.bukkit.command.TabCompleter {
-    private final com.debornmc.modelBrowserPlugin.manager.ModelManager modelManager;
+    private final ModelManager modelManager;
 
     /**
      * Constructs a new TabCompleter instance.

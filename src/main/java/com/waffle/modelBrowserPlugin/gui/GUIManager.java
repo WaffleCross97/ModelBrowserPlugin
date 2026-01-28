@@ -1,6 +1,6 @@
-package com.debornmc.modelBrowserPlugin.gui;
+package com.waffle.modelBrowserPlugin.gui;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

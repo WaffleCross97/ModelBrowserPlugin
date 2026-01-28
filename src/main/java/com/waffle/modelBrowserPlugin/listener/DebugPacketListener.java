@@ -1,6 +1,6 @@
-package com.debornmc.modelBrowserPlugin.listener;
+package com.waffle.modelBrowserPlugin.listener;
 
-import com.debornmc.modelBrowserPlugin.ModelBrowserPlugin;
+import com.waffle.modelBrowserPlugin.ModelBrowserPlugin;
 import com.github.retrooper.packetevents.event.*;
 import com.github.retrooper.packetevents.protocol.player.User;
 import org.bukkit.Bukkit;

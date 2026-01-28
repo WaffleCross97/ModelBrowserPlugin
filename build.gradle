@@ -48,8 +48,8 @@ shadowJar {
     archiveFileName = "${project.name}-${project.version}.jar"
 
     // Relocate dependencies to avoid conflicts
-    relocate 'com.google.gson', 'com.debornmc.modelbrowser.libs.gson'
-    relocate 'com.google.common', 'com.debornmc.modelbrowser.libs.guava'
+    relocate 'com.google.gson', 'com.waffle.modelBrowserPlugin.libs.gson'
+    relocate 'com.google.common', 'com.waffle.modelBrowserPlugin.libs.guava'
     // DO NOT relocate PacketEvents since we're using compileOnly
     // Only relocate dependencies you actually bundle (implementation)
 
